@@ -1,5 +1,5 @@
 """
-Lists are mutable objects in Python. They are created by using with [ ]. There are many ways to manipulate a list
+Lists are mutable objects in Python. They are created by using with [ ]. Items are seperated by " , ". There are many ways to manipulate a list
 
 1. .append()
 2. .extend()
