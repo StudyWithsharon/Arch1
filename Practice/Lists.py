@@ -1,5 +1,6 @@
 """
 Lists are mutable objects in Python. They are created by using with [ ]. Items are seperated by " , ". There are many ways to manipulate a list
+Keep in mind: sequence [start:stop:step]
 
 1. .append()
 2. .extend()
@@ -8,19 +9,29 @@ Lists are mutable objects in Python. They are created by using with [ ]. Items a
 5. .reverse()
 
 """
-#let´s add an item to the list
+#ADDING ITEMS
 careers = ["painter", "fisherman", "policeman", "teacher"]
 careers.append("singer")
 #updated list--> ["painter", "fisherman", "policeman", "teacher", "singer"]
 
-#let´s add a list into another list
+#ADD LIST WHITHIN A LIST
 toolbox = ["hammer", "saw", "screwdriver", "nails"]
 careers.append(toolbox)
 #updated list -->["painter", "fisherman", "policeman", "teacher", ["hammer", "saw", "screwdriver", "nails"]]
 
-
+#COMBINE TWO LISTS TOGETHER
 numbers1 = [1, 2, 3, 4, 5, 6, 7]
-nubers2 = [8, 9, 10]
+numbers2 = [8, 9, 10]
+numbers1.extend(numbers2)
+#updated list --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+#INSERTING ITEMS
+fruits = ["orange", "cherry", "apple", "pear", "melon"]
+fruits.insert(0, "coconut")
+#updated list --> ["coconut", "orange", "cherry", "apple", "pear", "melon"]
+
+#REMOVE ITEMS
+fruits = ["orange", "cherry", "apple", "pear", "melon"]
 
 
 
