@@ -16,6 +16,7 @@ Listed below great tools for programming:
 
 1. https://pythontutor.com/visualize.html#mode=edit
 2. https://regexr.com/
+3. https://stackoverflow.com/
 
 Listed below a few tools that are used in the workforce:
 
