@@ -1,4 +1,6 @@
-"""Lambda allows you to vreate an anonymous function. Lambda is a quick way to create a single line function. Bur for more complex functions we need to use def"""
+"""Lambda allows you to vreate an anonymous function. Lambda is a quick way to create a single line function. Bur for more complex functions we need to use def
+   Also in Lambda you don´t need a return statement. 
+"""
 
 #ADDING 2 NUMBERS
 sum1 = lambda a, b: a + b
