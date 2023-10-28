@@ -1,6 +1,6 @@
-import os
-import sys
-import json
+import os #provides functions to interact with the operating system
+import sys #provides access to interpreter-related variables and functions
+import json #allows encoding and decoding of JSON data
 
 
 '''
@@ -13,7 +13,7 @@ Emails: <email_1>, <email_2>
 Phone numbers: <number_1>, <number_2>
 '''
 def display(addressbook: list):
-    for contact in addressbook:
+    for contact in addressbook: #this function takes a list called adressbook as an argument and iterates trough each contact
         print("======================================")
         print(f"Position: {contact['id']}")
         print(f"First name: {contact['first_name']}")
@@ -24,7 +24,7 @@ def display(addressbook: list):
 '''
 return list of contacts sorted by first_name or last_name [if blank then unsorted], direction [ASC (default)/DESC])
 '''
-def list_contacts(addressbook, sort_by="first_name", direction="ASC"):
+def list_contacts(addressbook, sort_by="first_name", direction="ASC"): #this function takes the adressbook list and 2 optianl paramters. It will sort the list
     sorted_contacts = sorted(addressbook, key=lambda x: x[sort_by], reverse=(direction == "DESC"))
     return sorted_contacts
 
@@ -35,9 +35,9 @@ add new contact:
 - emails = {}
 - phone_numbers = {}
 '''
-def add_contact(addressbook, first_name, last_name, emails, phone_numbers):
-    new_id = max([c["id"] for c in addressbook], default=0) + 1
-    new_contact = {
+def add_contact(addressbook, first_name, last_name, emails, phone_numbers): #this function adds new contacts and gives them a unique ID number
+    new_id = max([c["id"] for c in addressbook], default=0) + 1 #using a for loop to get tha max ID number and than adding +1 to the new contact, when no contacts it defaults to 0 adding 1
+    new_contact = { #creates a new contact storing the info in a dictionary
         "id": new_id,
         "first_name": first_name,
         "last_name": last_name,
