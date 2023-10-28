@@ -50,7 +50,7 @@ def add_contact(addressbook, first_name, last_name, emails, phone_numbers): #thi
 '''
 remove contact by ID (integer)
 '''
-def remove_contact(addressbook, contact_id):
+def remove_contact(addressbook, contact_id): #this function removes contacts, it takes 2 arguments, it filters out ID matches
     addressbook = [contact for contact in addressbook if contact["id"] != contact_id]
     return addressbook
 
@@ -58,17 +58,17 @@ def remove_contact(addressbook, contact_id):
 '''
 merge duplicates (automated > same fullname [firstname & lastname])
 '''
-def merge_contacts(addressbook):
+def merge_contacts(addressbook): #this function merges first and last name into a set via concatenation and via a for loop it does it to all the contacts in the list
     full_names = set((contact["first_name"] + contact["last_name"]).lower() for contact in addressbook)
-    for full_name in full_names:
+    for full_name in full_names: 
         duplicates = [contact for contact in addressbook if (contact["first_name"] + contact["last_name"]).lower() == full_name]
         if len(duplicates) > 1:
-            main_contact = duplicates.pop(0)
+            main_contact = duplicates.pop(0) #selecting the first contact in the list
             for duplicate in duplicates:
                 main_contact["emails"].extend(duplicate["emails"])
                 main_contact["phone_numbers"].extend(duplicate["phone_numbers"])
                 addressbook.remove(duplicate)
-    return addressbook
+    return addressbook #returning the updated adressbook after
 
 '''
 read_from_json
@@ -150,5 +150,5 @@ def main(json_file):
 calling main function: 
 Do NOT change it.
 '''
-if __name__ == "__main__":
+if __name__ == "__main__": #cheks if script is run directly
     main('contacts.json')
