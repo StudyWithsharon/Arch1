@@ -1,3 +1,5 @@
+#creting an instance of a class
+
 class chocolate:
     def __init__(self):
         self.ocolor = "brown"
